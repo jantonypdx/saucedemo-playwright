@@ -1,0 +1,96 @@
+.flexRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  width: 750px;
+}
+
+.main {
+  margin-left: 10px;
+  width: 100%;
+}
+
+.ui.form .field > label {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+
+.ui.form input[type='checkbox'] {
+  margin-right: 6px;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.ui.grid > .row {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+h4 {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.commandLine {
+  width: 605px;
+}
+
+.ui.radio.checkbox .box,
+.ui.radio.checkbox label {
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.ui.checkbox label {
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.ui.checkbox.quickshopdiv {
+  padding-left: 9px;
+}
+
+.sandboxName {
+  width: 70px;
+  margin-left: -7px;
+}
+.searchString {
+  width: 120px;
+  margin-left: 22px;
+}
+
+.testcaseSelector {
+  max-width: 400px;
+}
+
+.productIndex {
+  width: 73px;
+}
+
+.passwordLabel {
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.password {
+  margin-left: 10px;
+}
+
+.ui.radio.checkbox.local {
+  display: inline-block;
+}
+
+.ui.radio.checkbox.remote {
+  display: none;
+}
+
+select.ui.dropdown {
+  margin-top: -30px;
+}

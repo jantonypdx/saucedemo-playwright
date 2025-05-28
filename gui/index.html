@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
+  <title>Test Runner</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div class="ui container">
+    <h1>Test Runner</h1>
+    <br />
+
+    <div class="ui two column grid">
+
+      <!-- Log level -->
+      
+      <div class="ui row">
+        <div class="ui two wide column">
+          <h4>LogLevel:</h4>
+        </div>
+        <div class="ui fourteen wide column">
+          <div class="ui radio checkbox">
+            <input type="radio" name="loglevel" id="debug" value="debug" />
+            <label>debug</label>
+          </div>
+          <div class="ui radio checkbox">
+            <input type="radio" name="loglevel" value="verbose" title="verbose" />
+            <label>verbose</label>
+          </div>
+          <div class="ui radio checkbox">
+            <input type="radio" name="loglevel" value="info" title="info" />
+            <label>info</label>
+          </div>
+          <div class="ui radio checkbox">
+            <input type="radio" name="loglevel" value="warn" title="warn" />
+            <label>warn</label>
+          </div>
+          <div class="ui radio checkbox">
+            <input type="radio" name="loglevel" value="error" title="error" />
+            <label>error</label>
+          </div>
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <!-- Test browser headed (i.e. visible) -------- -->
+          <b>Test:</b>&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="ui checkbox">
+            <input type="checkbox" id="visible">
+            <label>visible</label>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Project browser -->
+
+      <div class="ui row">
+        <div class="ui two wide column">
+          <h4>Browsers:</h4>
+        </div>
+        <div class="ui fourteen wide column">
+          <div class="ui checkbox">
+            <input type="checkbox" id="chromium">
+            <label>chromium</label>
+          </div>
+          <div class="ui checkbox">
+            <input type="checkbox" id="firefox">
+            <label>firefox</label>
+          </div>
+          <div class="ui checkbox">
+            <input type="checkbox" id="mobileChromium">
+            <label>mobile-chromium</label>
+          </div>
+          <div class="ui checkbox">
+            <input type="checkbox" id="webkit">
+            <label>webkit</label>
+          </div>
+          <div class="ui checkbox">
+            <input type="checkbox" id="mobileWebkit">
+            <label>mobile-webkit</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Site -->
+
+      <div class="ui row">
+        <div class="ui two wide column">
+          <h4>Site:</h4>
+        </div>
+        <div class="ui fourteen wide column">
+          <label id="site">PRD-COL-UK-en</label>
+        </div>
+      </div>
+
+
+      <div class="ui divider"></div>
+
+      <!-- fixture & workers selectors -------- -->
+
+      <div class="ui row">
+        <div class="ui two wide column">
+          <br />
+          <h4>Test File:</h4>
+        </div>
+        <div class="ui fourteen wide column">
+          <br />
+          <select class="ui dropdown" id="fixtureSelector"></select>
+        </div>
+      </div>
+
+      <!-- test & retries selectors -------- -->
+
+      <div class="ui row">
+        <div class="ui two wide column">
+          <br />
+          <h4>Test:</h4>
+        </div>
+        <div class="ui fourteen wide column">
+          <br />
+          <select class="ui dropdown testcaseSelector" id="testcaseSelector"></select>
+        </div>
+      </div>
+
+      <div class="ui divider"></div>
+
+
+      <!-- Reporter -------- -->
+
+      <div class="ui row">
+        <div class="ui two wide column">
+          <h4>Reporter:</h4>
+        </div>
+        <div class="ui fourteen wide column">
+          <div class="ui radio checkbox">
+            <input type="radio" name="report" value="text" />
+            <label>text</label>
+          </div>
+          <div class="ui radio checkbox">
+            <input type="radio" name="report" value="playwright-html" />
+            <label>Playwright HTML</label>
+          </div>
+          <div class="ui radio checkbox">
+            <input type="radio" name="report" value="monocart-html" />
+            <label>Monocart HTML</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- command line -------- -->
+
+      <br>
+      <div class="ui row">
+        <div class="ui two wide column">
+          <h4>Command:</h4>
+          <div class="ui action input">
+            <textarea class="commandLine" id="commandLine" rows="3" cols="80" readonly></textarea>
+            <button type="button" id="copyCommandLine" value="copy" title="copy" class="copyCommand ui right icon button">
+              <i class="clipboard icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <br />
+        <button id="runTestButton" class="ui primary button">Run Test</button>
+      </div>
+    </div>
+
+    <script src="./app.cjs"></script>
+</body>
+
+</html>

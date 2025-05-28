@@ -1,0 +1,32 @@
+{
+  "name": "saucedemo-playwright",
+  "version": "1.0.0",
+  "main": "./gui/main.cjs",
+  "type": "module",
+  "scripts": {
+    "postinstall": "npx playwright install",
+    "lint": "npx eslint && echo 'lint: no issues found'",
+    "gui": "electron ."
+  },
+  "keywords": [],
+  "author": "John Antony <jantony.opt141@silomails.com>",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "@playwright/test": "^1.52.0",
+    "dotenv": "^16.5.0",
+    "monocart-reporter": "^2.9.20",
+    "playwright": "^1.52.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-store": "^8.2.0",
+    "electron-window-state": "^5.0.3",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.4.0",
+    "prettier": "3.3.3",
+    "tmp": "^0.2.3"
+  }
+}
