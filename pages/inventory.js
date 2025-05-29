@@ -29,7 +29,7 @@ export default class Inventory extends Base {
   async getItemCount() {
     log.info(`Inventory.getItemCount()`);
     const count = await this.page.locator('div.inventory_item').count();
-    log.verbose(`Inventory.getItemCount - count: ${count}`);
+    log.verbose(`Inventory.getItemCount() - count: ${count}`);
     return count;
   }
 
