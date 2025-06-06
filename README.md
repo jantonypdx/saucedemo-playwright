@@ -83,10 +83,17 @@ Multiple browsers can be selected to run multiple tests in parallel.
 This repository supports reporting to three different types of reports:
 
 - text:
+
   <img src="./docs/img/text-reporter.png" alt="text reporter" width="600"/>
+
 - Playwright's HTML report:
+
   <img src="./docs/img/playwright-reporter.png" alt="text reporter" width="600"/>
+
 - MonoCart's HTML report:
+
   <img src="./docs/img/monocart-reporter.png" alt="text reporter" width="600"/>
 
 In the GUI, select the reporter radio button and note the `--reporter=` additions in the Command box.
+
+<img src="./docs/img/command-box.png" alt="text reporter" width="500"/>
