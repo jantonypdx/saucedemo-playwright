@@ -2,13 +2,13 @@
 
 This repository contains UI automated tests for validating the functionality of the [SauceDemo](https://www.saucedemo.com) example website. It is built using [Node.js](https://nodejs.org/en) and [Playwright](https://playwright.dev/) test automation framework.
 
-This repository was built using [Page Object Model](https://playwright.dev/docs/pom) classes and files where each object represents a separate page of a website. You can find these in the `/pages` subdirectory of the repository.
+This repository was built using [Page Object Model](https://playwright.dev/docs/pom) class files where each object represents a separate page of a website. You can find these in the `/pages` subdirectory of the repository.
 
 Since many pages have shared, common functionality between them (such as the MiniCart functionality in the header), the page objects are created using a base class and several component "method" files. The methods in these method files are then assigned to each page object (i.e. an aggregate object). This keeps common functionality in sepearate, individual files where they can be updated in one location, but then all page objects will receive the updated functionality.
 
 Additionally, an `AllPages` object acts as a Page Factory for creating page objects for all pages of the website. This is created at the beginning of each test.
 
-Test files can be found in the `/tests` subdirectory. They have a filename format like `sometest.spec.mjs`.
+Test files can be found in the `/tests` subdirectory. They have a filename format like `testname.spec.mjs`.
 
 ---
 
@@ -29,7 +29,9 @@ Environment variables can be set on your system or within the `config/.env` file
 
 ### via GUI:
 
-The easiest way to run test is via the GUI: `npm run gui`  
+<img src="./docs/img/saucedemo-gui.png" alt="SauceDemo Playwright GUI" width="600"/>
+
+The easiest way to run a test is via the GUI: `npm run gui`  
 This provides a UI app that lets you try different tests and options.  
 Note: the GUI lets you
 
